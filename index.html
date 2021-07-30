@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:grey;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+                <b style="text-align:center">This is an area chart with size based on sample numbers</b>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div id="bar"></div>
+            <b  style="text-align:center" class="white">The top strains found for each individual in descending order are shown here</b>
+        </div>
+        <div class="col-md-5">
+            <div id="gauge"></div>
+            <b style="text-align:center">This is a crude estimation of how smelly each individual is</b>
+        </div>
+
+        <div class="col-md-2">
+            <div class="well">
+                <h5>Test Subject ID No.:</h5>
+                <!--<select id="selDataset"></select> -->
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Demographic Info</h3>
+                </div>
+                <div id="sample-metadata" class="panel-body"></div>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
